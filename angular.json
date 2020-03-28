@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "rona-can-i"
+    }
+  },
+  "defaultProject": "rona-can-i",
+  "cli": {
+    "analytics": false
+  }
 }

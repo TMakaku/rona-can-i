@@ -2,13 +2,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { CanIComponent } from './can-i/can-i.component';
+import { S1LottieModule } from '@sentinel-one/s1-lottie';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CanIComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, S1LottieModule
   ],
   providers: [],
   bootstrap: [AppComponent]
