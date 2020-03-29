@@ -1,5 +1,5 @@
 <style>
-/* 
+    /* 
     Mobile:
     Main text - Size: 30 pt 
     Main text - line-height: 96.7%
@@ -29,7 +29,7 @@
 */
 
 
-.maintext {
+    .maintext {
         font-size: 53.91px !important;
         color: #F4971A;
         font-weight: bold;
@@ -48,38 +48,57 @@
         font-weight: bold;
         margin: 0px;
     }
-@media screen and (max-width: 767px) {
 
-    .maintext {
-        font-size: 30px !important;
-        color: #F4971A;
-        font-weight: bold;
+    @media screen and (max-width: 767px) {
+
+        .maintext {
+            font-size: 30px !important;
+            color: #F4971A;
+            font-weight: bold;           
+        }
+
+        .notext {
+            font-size: 50px !important;
+            color: #F4F5F7;
+            margin: 0;
+            font-weight: bold;
+        }
+
+        .notextExtra {
+            font-size: 20px !important;
+            color: #F4F5F7;
+            font-weight: bold;
+            margin: 0px;
+        }
     }
 
-    .notext {
-        font-size: 50px !important;
-        color: #F4F5F7;
+    .wrapper {
+        display: grid;
+        grid-gap: 10px;
+        /* grid-template-columns: 100px 100px 100px; */
+        grid-template-rows: 10% 15% 25% 25% 25% ;
+        color: #444;
+        width: 100vw;
+        min-height: 100vh;
         margin: 0;
-        font-weight: bold;
+        padding: 0;
     }
 
-    .notextExtra {
-        font-size: 20px !important;
-        color: #F4F5F7;
-        font-weight: bold;
-        margin: 0px;
+    .top {
+        grid-row: 2 / span 2;
     }
-}
-
+    .bottom {
+        grid-row: 4;
+    }
 </style>
 
-<div class="container">
-    <div class="vertical-center" ngClass="maintext">
-        <p [innerHtml]="title.question"></p>
-    </div>
 
-    <div class="vertical-center" >
-        <p ngClass="notext" [innerHtml]="title.answer"></p>
-        <p ngClass="notextExtra"[innerHtml]="title.answerExtra"></p>
+<div class="wrapper">
+    <div class="top">
+        <div ngClass="maintext"[innerHtml]="title.question"></div>
+    </div>
+    <div class="bottom">
+        <div ngClass="notext" [innerHtml]="title.answer"></div>
+        <div ngClass="notextExtra" [innerHtml]="title.answerExtra"></div>
     </div>
 </div>
