@@ -24,7 +24,6 @@ const ronaBaseHref = '/rona-can-i/'
 })
 export class AppComponent implements OnInit, AfterViewInit {
   private myAnimation: AnimationItem;
-  private windowsize;
   private prevIndex = 0;
 
   private titles: TitleObject[] = [
