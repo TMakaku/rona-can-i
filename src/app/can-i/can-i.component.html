@@ -1,9 +1,21 @@
+<style>
+    .maintext {
+        font-size: 30pt;
+        color: #F4971A
+    }
+
+    .notext {
+        font-size: 50pt;
+        color: #F4F5F7
+    }
+</style>
+
 <div class="container">
-    <div class="vertical-center">
+    <div class="vertical-center" ngClass="maintext">
         <h1 [innerHtml]="title.question"></h1>
     </div>
 
-    <div class="vertical-center">
+    <div class="vertical-center" ngClass="notext">
         <h1 [innerHtml]="title.answer"></h1>
     </div>
 </div>

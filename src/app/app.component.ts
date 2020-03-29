@@ -26,50 +26,50 @@ export class AppComponent implements OnInit, AfterViewInit {
   private prevIndex = 0;
 
   private titles: TitleObject[] = [
-    {question: "Im hungry, <br>can I leave <br>the house now?"},
-    {question: "I want icecream, <br>can I leave <br>the house now?"},
-    {question: "My roommate farted, <br>can I leave <br>the house now?"},
-    {question: "I see a doggo outside, <br>can I leave <br>the house now"},
+    {question: "Im hungry, <br><i>can I leave <br>the house now?<i>"},
+    {question: "I want icecream, <br><i>can I leave <br>the house now?</i>"},
+    {question: "My roommate farted, <br><i>can I leave <br>the house now?</i>"},
+    {question: "I see a doggo outside, <br><i>can I leave <br>the house now?</i>"},
 
-    {question: "In need of ramen, <br>can I leave <br>the house now?"},
-    {question: "I feel like I won't <br>catch the virus, <br>can I leave <br>the house now"},
-    {question: "I'm craving <br>ice cream, <br>can I leave <br>the house now"},
-    {question: "I watched <br>everything <br>on Netflix, <br>can I leave <br>the house now"},
-    {question: "It's nice <br>weather, <br>can I leave <br>the house now"},
-    {question: "Simon says: <br>“go outside”, <br>can I leave <br>the house now"},
-    {question: "I did every <br>instagram <br>#challenge, <br>can I leave <br>the house now"},
-    {question: "I need a new <br>puzzle, <br>can I leave <br>the house now"},
-    {question: "I need to get <br>away from my <br>husband, it's for <br>his own safety, <br>can I leave <br>the house now"},
-    {question: "I washed my <br>hands, twice, <br>can I leave <br>the house now"},
-    {question: "My family is <br>driving me <br>crazy, <br>can I leave <br>the house now"},
-    {question: "I need extra <br>toilet paper, <br>can I leave <br>the house now"},
-    {question: "I named all the <br>spiders in my <br>house, <br>can I leave <br>the house now"},
-    {question: "My hair looks <br>amazing today, <br>can I leave <br>the house now"},
-    {question: "All my friends <br>are at the beach, <br>can I leave <br>the house now"},
-    {question: "There's SALE, <br>can I leave <br>the house now"},
-    {question: "I see 23 puppies <br>outside, <br>can I leave <br>the house now"},
-    {question: "My house is <br>infested with <br>giant iguanas, <br>can I leave <br>the house now"},
-    {question: "I don't like my <br>kids anymore, <br>can I leave <br>the house now"},
-    {question: "My cat is <br>possessed, <br>can I leave <br>the house now"},
-    {question: "I'm all caught up <br>on Instagram, <br>can I leave <br>the house now"},
-    {question: "It's complicated, <br>can I leave <br>the house now"},
-    {question: "Trump said it's <br>okay to leave <br>the house, <br>can I leave <br>the house now"},
-    {question: "I ran out of <br>weed and booze, <br>can I leave <br>the house now"},
-    {question: "I need to go to <br>the barbershop, <br>desperately, <br>can I leave <br>the house now"},
-    {question: "I'm a match <br>on tinder, <br>can I leave <br>the house now"},
-    {question: "I smell smoke, <br>I think there <br>is a fire, <br>can I leave <br>the house now"},
-    {question: "My nail broke, <br>can I leave <br>the house now"},
-    {question: "I literally need <br>a flat white, <br>can I leave <br>the house now"},
-    {question: "I need to get <br>the F#$% out <br>of my house, <br>can I leave <br>the house now"},
-    {question: "I haven't had <br>KFC for days, <br>can I leave <br>the house now"},
-    {question: "My mom said <br>to get out of <br>her sight this <br>instance, <br>can I leave <br>the house now"},
-    {question: "I've never spent <br>this much time <br>with the Mrs, <br>can I leave <br>the house now"},
+    {question: "In need of ramen, <br><i>can I leave <br>the house now?</i>"},
+    {question: "I feel like I won't <br>catch the virus, <br><i>can I leave <br>the house now?</i>"},
+    {question: "I'm craving <br>ice cream, <br><i>can I leave <br>the house now?</i>"},
+    {question: "I watched <br>everything <br>on Netflix, <br><i>can I leave <br>the house now?</i>"},
+    {question: "It's nice <br>weather, <br><i>can I leave <br>the house now?</i>"},
+    {question: "Simon says: <br>“go outside”, <br><i>can I leave <br>the house now?</i>"},
+    {question: "I did every <br>instagram <br>#challenge, <br><i>can I leave <br>the house now?</i>"},
+    {question: "I need a new <br>puzzle, <br><i>can I leave <br>the house now?</i>"},
+    {question: "I need to get <br>away from my <br>husband, it's for <br>his own safety, <br><i>can I leave <br>the house now?</i>"},
+    {question: "I washed my <br>hands, twice, <br><i>can I leave <br>the house now?</i>"},
+    {question: "My family is <br>driving me <br>crazy, <br><i>can I leave <br>the house now?</i>"},
+    {question: "I need extra <br>toilet paper, <br><i>can I leave <br>the house now?</i>"},
+    {question: "I named all the <br>spiders in my <br>house, <br><i>can I leave <br>the house now?</i>"},
+    {question: "My hair looks <br>amazing today, <br><i>can I leave <br>the house now?</i>"},
+    {question: "All my friends <br>are at the beach, <br><i>can I leave <br>the house now?</i>"},
+    {question: "There's SALE, <br><i>can I leave <br>the house now?</i>"},
+    {question: "I see 23 puppies <br>outside, <br><i>can I leave <br>the house now?</i>"},
+    {question: "My house is <br>infested with <br>giant iguanas, <br><i>can I leave <br>the house now?</i>"},
+    {question: "I don't like my <br>kids anymore, <br><i>can I leave <br>the house now?</i>"},
+    {question: "My cat is <br>possessed, <br><i>can I leave <br>the house now?</i>"},
+    {question: "I'm all caught up <br>on Instagram, <br><i>can I leave <br>the house now?</i>"},
+    {question: "It's complicated, <br><i>can I leave <br>the house now?</i>"},
+    {question: "Trump said it's <br>okay to leave <br>the house, <br><i>can I leave <br>the house now?</i>"},
+    {question: "I ran out of <br>weed and booze, <br><i>can I leave <br>the house now?</i>"},
+    {question: "I need to go to <br>the barbershop, <br>desperately, <br><i>can I leave <br>the house now?</i>"},
+    {question: "I'm a match <br>on tinder, <br><i>can I leave <br>the house now?</i>"},
+    {question: "I smell smoke, <br>I think there <br>is a fire, <br><i>can I leave <br>the house now?</i>"},
+    {question: "My nail broke, <br><i>can I leave <br>the house now?</i>"},
+    {question: "I literally need <br>a flat white, <br><i>can I leave <br>the house now?</i>"},
+    {question: "I need to get <br>the F#$% out <br>of my house, <br><i>can I leave <br>the house now?</i>"},
+    {question: "I haven't had <br>KFC for days, <br><i>can I leave <br>the house now?</i>"},
+    {question: "My mom said <br>to get out of <br>her sight this <br>instance, <br><i>can I leave <br>the house now?</i>"},
+    {question: "I've never spent <br>this much time <br>with the Mrs, <br><i>can I leave <br>the house now?</i>"},
 
-    {question: "My prins <br>charming is <br>outside, <br>can I leave <br>the house now", answer: "NO! <br>he should be inside"},
-    {question: "I'm out of wine, <br>can I leave <br>the house now", answer: "NO! <br>...just hurry back"},
-    {question: "I'm horny and <br>my partners <br>parents aren't <br>home, <br>can I leave <br>the house now", answer: "NO! <br>your partners parents <br>should be home"},
-    {question: "It's my birthday, <br>can I leave <br>the house now", answer: "NO! <br>happy birthday"},
-    {question: "Yo quiero tacos, <br>can I leave <br>the house now", answer: "¡NO!"},
+    {question: "My prins <br>charming is <br>outside, <br><i>can I leave <br>the house now?</i>", answer: "NO! <br>he should be inside"},
+    {question: "I'm out of wine, <br><i>can I leave <br>the house now?</i>", answer: "NO! <br>...just hurry back"},
+    {question: "I'm horny and <br>my partners <br>parents aren't <br>home, <br><i>can I leave <br>the house now?</i>", answer: "NO! <br>your partners parents <br>should be home"},
+    {question: "It's my birthday, <br><i>can I leave <br>the house now?</i>", answer: "NO! <br>happy birthday"},
+    {question: "Yo quiero tacos, <br><i>can I leave <br>the house now?</i>", answer: "¡NO!"},
   ];
 
 
@@ -98,7 +98,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = 'green';
+    this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#085F83';
   }
 
   onAnimationCreated(animation: AnimationItem) {
@@ -116,7 +116,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   private determineText(urlIndex?) {
     const randomIndex = isNaN(urlIndex) || !urlIndex ? this.getRandomIndex() : urlIndex;
     this.prevIndex = randomIndex
-    window.history.pushState('', "Rona can I?", `/rona-can-i/${randomIndex}`);
+    window.history.pushState('', "Rona can I?</i>", `/rona-can-i/${randomIndex}`);
     this.canIText = this.createTitleObject(this.titles[randomIndex]);
   }
 
@@ -126,7 +126,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   private  createTitleObject (obj: TitleObject): TitleObject {
-    return { question: obj.question, answer: obj.answer ? obj.answer : "NO" } 
+    return { question: obj.question, answer: obj.answer ? obj.answer : "NO!" } 
   }
 
   isMobileDevice() {

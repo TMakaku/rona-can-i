@@ -6,13 +6,13 @@ import { TitleObject } from '../app.component';
   templateUrl: './can-i.component.html',
   styleUrls: ['./can-i.component.scss']
 })
-export class CanIComponent implements OnInit, OnChanges{
-@Input() 
-title: TitleObject;
+export class CanIComponent implements OnInit, OnChanges {
+  @Input()
+  title: TitleObject;
 
   constructor() { }
   ngOnChanges(changes: SimpleChanges): void {
-    console.log(this.title)
+    // console.log(this.title)
   }
 
   ngOnInit(): void {
