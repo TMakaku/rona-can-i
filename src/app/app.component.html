@@ -101,7 +101,7 @@
   <!-- <rona-can-i [title]="canIText"></rona-can-i> -->
   <div class="wrapper">
     <div class="top">
-      <div #maintextDiv ngClass="maintext" style="color:{{tarsitextColor}};" [innerHtml]="canIText.question"></div>
+      <div #maintextDiv ngClass="maintext" [innerHtml]="canIText.question"></div>
     </div>
     <div class="mid">
       <div ngClass="notext" [innerHtml]="canIText.answer"></div>
