@@ -69,7 +69,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   private determineText(urlIndex?) {
     const randomIndex = isNaN( urlIndex ) || !urlIndex ? this.getRandomIndex(): urlIndex;
     this.prevIndex = randomIndex
-    window.history.pushState('', "Rona can I?", `/` + randomIndex);
+    window.history.pushState('', "Rona can I?", `/rona-can-i/${randomIndex}`);
     this.canIText = this.titles[randomIndex];
   }
 
