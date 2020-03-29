@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { TitleObject } from '../app.component';
 
 @Component({
   selector: 'rona-can-i',
@@ -7,7 +8,7 @@ import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/cor
 })
 export class CanIComponent implements OnInit, OnChanges{
 @Input() 
-title = "";
+title: TitleObject;
 
   constructor() { }
   ngOnChanges(changes: SimpleChanges): void {
