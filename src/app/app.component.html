@@ -2,18 +2,18 @@
   :host {
     font-family: Arial;
     /* font-size: 14px; */
-    color: #333;
+    /* color: #333; */
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    line-height: 53.91pt;
+    /* line-height: 93.91pt; */
   }
 
   .maintext {
     font-size: 53.91px !important;
-    color: #F4971A;
+    /* color: #F4971A; */
     font-weight: bold;
-    line-height: 30px;
+    line-height: 50px;
   }
 
   .notext {
@@ -21,7 +21,7 @@
     color: #F4F5F7;
     margin: 0;
     font-weight: bold;
-    line-height: 30px;
+    line-height: 50px;
   }
 
   .notextExtra {
@@ -29,33 +29,23 @@
     color: #F4F5F7;
     font-weight: bold;
     margin: 0px;
-    line-height: 30px;
+    line-height: 50px;
   }
 
   /* Responsive Styles */
   @media screen and (max-width: 767px) {
     :host {
-      line-height: 30pt;
+      /* line-height: 30pt; */
+      line-height: 53.91pt;
     }
-
     .maintext {
       font-size: 30px !important;
-      color: #F4971A;
-      font-weight: bold;
     }
-
     .notext {
       font-size: 50px !important;
-      color: #F4F5F7;
-      margin: 0;
-      font-weight: bold;
     }
-
     .notextExtra {
       font-size: 20px !important;
-      color: #F4F5F7;
-      font-weight: bold;
-      margin: 0px;
     }
   }
 
@@ -68,7 +58,7 @@
     grid-gap: 3%;
     grid-template-columns: 5% 60% 35%;
     grid-template-rows: 10% 15% 20% 5% 10% 35%;
-    color: #444;
+    /* color: #444; */
     width: 100vw;
     min-height: 100vh;
     margin: 0;
@@ -108,7 +98,7 @@
   <!-- <rona-can-i [title]="canIText"></rona-can-i> -->
   <div class="wrapper">
     <div class="top">
-      <div ngClass="maintext" [innerHtml]="canIText.question"></div>
+      <div #maintextDiv ngClass="maintext" style="color:{{tarsitextColor}};" [innerHtml]="canIText.question"></div>
     </div>
     <div class="mid">
       <div ngClass="notext" [innerHtml]="canIText.answer"></div>

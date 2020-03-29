@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { OnInit } from '@angular/core';
 import { S1LottieConfig } from '@sentinel-one/s1-lottie';
 import { AnimationItem } from 'lottie-web';
@@ -74,6 +74,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   ];
 
 
+
   canIText: TitleObject;
   lottieParams: S1LottieConfig = {
     path: 'assets/Refresh.json',
@@ -82,6 +83,8 @@ export class AppComponent implements OnInit, AfterViewInit {
     autoplay: false
   };
   lottieSize = 250;
+  textColor= '#F4971A';
+  bgColor= '#085F83';
 
   constructor(private elementRef: ElementRef) {
     fromEvent(document.defaultView, EVENT_RESIZE)
@@ -91,6 +94,7 @@ export class AppComponent implements OnInit, AfterViewInit {
         console.log(innerHeight, innerWidth);
       })
   }
+  @ViewChild('maintextDiv') maintext: ElementRef;
 
   ngOnInit() {
     const urlIndex = Number(window.location.pathname.substring(ronaBaseHref.length));
@@ -99,7 +103,8 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#085F83';
+    this.maintext.nativeElement.style.color =  this.textColor;
+    this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = this.bgColor;
   }
 
   onAnimationCreated(animation: AnimationItem) {
