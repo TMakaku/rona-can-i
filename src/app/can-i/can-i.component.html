@@ -1,21 +1,85 @@
 <style>
-    .maintext {
-        font-size: 30pt;
-        color: #F4971A
+/* 
+    Mobile:
+    Main text - Size: 30 pt 
+    Main text - line-height: 96.7%
+    Main text - color: different
+
+    'NO!' text - Size: 50 pt
+    'NO!' text - color: F4F5F7
+
+    NO! + extra text - Size: 20 pt
+    NO! + extra text - line-height: 96.7%
+    NO! + extra text - color: F4F5F7
+
+    'Share' text - size: 20pt
+    'Share' text - color: F4F5F7
+
+    Desktop:
+    Main text - Size: 53.91 pt 
+    Main text - line-height: 96.7%
+    Main text - color: different
+
+    'NO!' text - Size: 89.84 pt
+    'NO!' text - color: F4F5F7
+
+    NO! + extra text - Size: 35.65 pt
+    NO! + extra text - line-height: 96.7%
+    NO! + extra text - color: F4F5F7 
+*/
+
+
+.maintext {
+        font-size: 53.91px !important;
+        color: #F4971A;
+        font-weight: bold;
     }
 
     .notext {
-        font-size: 50pt;
-        color: #F4F5F7
+        font-size: 89.84px !important;
+        color: #F4F5F7;
+        margin: 0;
+        font-weight: bold;
     }
+
+    .notextExtra {
+        font-size: 35.65px !important;
+        color: #F4F5F7;
+        font-weight: bold;
+        margin: 0px;
+    }
+@media screen and (max-width: 767px) {
+
+    .maintext {
+        font-size: 30px !important;
+        color: #F4971A;
+        font-weight: bold;
+    }
+
+    .notext {
+        font-size: 50px !important;
+        color: #F4F5F7;
+        margin: 0;
+        font-weight: bold;
+    }
+
+    .notextExtra {
+        font-size: 20px !important;
+        color: #F4F5F7;
+        font-weight: bold;
+        margin: 0px;
+    }
+}
+
 </style>
 
 <div class="container">
     <div class="vertical-center" ngClass="maintext">
-        <h1 [innerHtml]="title.question"></h1>
+        <p [innerHtml]="title.question"></p>
     </div>
 
-    <div class="vertical-center" ngClass="notext">
-        <h1 [innerHtml]="title.answer"></h1>
+    <div class="vertical-center" >
+        <p ngClass="notext" [innerHtml]="title.answer"></p>
+        <p ngClass="notextExtra"[innerHtml]="title.answerExtra"></p>
     </div>
 </div>
