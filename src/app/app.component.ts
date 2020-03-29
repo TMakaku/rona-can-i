@@ -90,13 +90,13 @@ export class AppComponent implements OnInit, AfterViewInit {
       .subscribe(() => {
         const { innerHeight, innerWidth } = document.defaultView;
         console.log(innerHeight, innerWidth);
-        this.lottieSize = this.isMobileDevice() ? 150 : 250;
       })
   }
 
   ngOnInit() {
     const urlIndex = Number(window.location.pathname.substring(ronaBaseHref.length));
     this.determineText(urlIndex);
+    this.lottieSize = this.isMobileDevice() ? 150 : 250;
   }
 
   ngAfterViewInit() {
