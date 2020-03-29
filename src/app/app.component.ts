@@ -27,11 +27,9 @@ export class AppComponent implements OnInit, AfterViewInit {
   private prevIndex = 0;
 
   private titles: TitleObject[] = [
-    { question: "Im hungry, <br><i>can I leave <br>the house now?<i>" },
-    { question: "I want icecream, <br><i>can I leave <br>the house now?</i>" },
+    // { question: "Im hungry, <br><i>can I leave <br>the house now?<i>" },
     { question: "My roommate farted, <br><i>can I leave <br>the house now?</i>" },
     { question: "I see a doggo outside, <br><i>can I leave <br>the house now?</i>" },
-
     { question: "In need of ramen, <br><i>can I leave <br>the house now?</i>" },
     { question: "I feel like I won't <br>catch the virus, <br><i>can I leave <br>the house now?</i>" },
     { question: "I'm craving <br>ice cream, <br><i>can I leave <br>the house now?</i>" },
@@ -65,7 +63,6 @@ export class AppComponent implements OnInit, AfterViewInit {
     { question: "I haven't had <br>KFC for days, <br><i>can I leave <br>the house now?</i>" },
     { question: "My mom said <br>to get out of <br>her sight this <br>instance, <br><i>can I leave <br>the house now?</i>" },
     { question: "I've never spent <br>this much time <br>with the Mrs, <br><i>can I leave <br>the house now?</i>" },
-
     { question: "My prins <br>charming is <br>outside, <br><i>can I leave <br>the house now?</i>", answer: "NO!", answerExtra: "he should be inside" },
     { question: "I'm out of wine, <br><i>can I leave <br>the house now?</i>", answer: "NO!", answerExtra: "...just hurry back" },
     { question: "I'm horny and <br>my partners <br>parents aren't <br>home, <br><i>can I leave <br>the house now?</i>", answer: "NO!", answerExtra: "your partners parents <br>should be home" },
@@ -94,7 +91,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     { textcolor: "#20263D", bgcolor: "#CFD3D6" },
     { textcolor: "#EAC629", bgcolor: "#3834F2" },
     { textcolor: "#83A6F6", bgcolor: "#20263D" },
-
+// -----------------------------------------------
     { textcolor: "#F1CB92", bgcolor: "#818061" },
     { textcolor: "#323E48", bgcolor: "#FD715D" },
     { textcolor: "#685E5F", bgcolor: "#EAC629" },
@@ -126,8 +123,6 @@ export class AppComponent implements OnInit, AfterViewInit {
   };
   lottieSize = 250;
   firstUrlIndex: number;
-  // textColor= '#F4971A';
-  // bgColor= '#085F83';
 
   constructor(private elementRef: ElementRef) {
     fromEvent(document.defaultView, EVENT_RESIZE)
@@ -165,7 +160,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   private determineText(urlIndex?) {
     const randomIndex = isNaN(urlIndex) || !urlIndex ? this.getRandomIndex() : urlIndex;
     this.prevIndex = randomIndex
-    window.history.pushState('', "Rona can I?</i>", `/rona-can-i/${randomIndex}`);
+    window.history.pushState('', "Rona can I?", `/rona-can-i/${randomIndex}`);
     if (!urlIndex)
       this.setColorScheme(randomIndex);
     this.canIText = this.createTitleObject(this.titles[randomIndex]);
