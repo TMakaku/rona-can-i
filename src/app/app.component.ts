@@ -60,7 +60,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     { question: "I literally need <br>a flat white, <br><i>can I leave <br>the house now?</i>" },
     { question: "I need to get <br>the F#$% out <br>of my house, <br><i>can I leave <br>the house now?</i>" },
     { question: "I haven't had <br>KFC for days, <br><i>can I leave <br>the house now?</i>" },
-    { question: "My mom said <br>to get out of <br>her sight this <br>instance, <br><i>can I leave <br>the house now?</i>" },
+    { question: "My mom said <br>to get out of <br>her sight this <br>instant, <br><i>can I leave <br>the house now?</i>" },
     { question: "I've never spent <br>this much time <br>with the Mrs, <br><i>can I leave <br>the house now?</i>" },
     { question: "My prins <br>charming is <br>outside, <br><i>can I leave <br>the house now?</i>", answer: "NO!", answerExtra: "he should be inside" },
     { question: "I'm out of wine, <br><i>can I leave <br>the house now?</i>", answer: "NO!", answerExtra: "...just hurry back" },
