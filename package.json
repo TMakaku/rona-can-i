@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "github": "ng deploy --base-href=/rona-can-i/"
+    "github": "ng deploy --base-href=/"
   },
   "private": true,
   "dependencies": {
