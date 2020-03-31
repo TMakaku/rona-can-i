@@ -172,6 +172,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     const { textcolor, bgcolor } = this.colorSchemes[index];
     this.maintext.nativeElement.style.color = textcolor;
     this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = bgcolor;
+    this.elementRef.nativeElement.ownerDocument.body.style.margin = 0;
   }
 
   private getRandomIndex() {
