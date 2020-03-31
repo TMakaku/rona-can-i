@@ -43,6 +43,7 @@
     margin: 0px;
     line-height: 53.91px;
   }
+
   /* Responsive Styles */
   @media screen and (max-width: 767px) {
     .wrapper {
@@ -86,7 +87,7 @@
     grid-row: 2 / span 2;
     grid-column: 3 / span 1;
     text-align: right;
-    padding-right: 5  %;
+    padding-right: 5%;
   }
 
   .mid {
@@ -111,16 +112,20 @@
     height: 25%;
     text-align: center;
   }
+
+  .share:hover {
+    fill-opacity: 50%;
+  }
 </style>
 
 
 
 
 <div class="wrapper">
-  <div class="topright">
+  <div class="topright share">
     <!-- width="155" height="36" -->
-    <svg #share [copy-clipboard]="getUrl()" (copied)="copied($event)" 
-    width="155" height="36" viewBox="0 0 155 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg #share [copy-clipboard]="getUrl()" (copied)="copied($event)" width="155" height="36" viewBox="0 0 155 36"
+      fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clip-path="url(#clip0)">
         <path
           d="M34.8145 16.097L19.0918 1.49738V10.4818C7.30317 10.8748 1.12305 16.7079 1.12305 28.8806V32.9427C5.54561 25.4318 7.6502 22.8353 19.0918 22.8353V31.8196L34.8145 16.097Z"

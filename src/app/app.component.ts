@@ -150,6 +150,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     }
   }
 
+
   copied(event) {
     alert("Link has been copied!");
   }
