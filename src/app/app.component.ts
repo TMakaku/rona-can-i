@@ -143,6 +143,10 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     this.setColorScheme(this.firstUrlIndex);
+    if(this.isMobileDevice() ) {
+      this.sharebutton.nativeElement.setAttribute("width", "86");
+      this.sharebutton.nativeElement.setAttribute("height", "20");
+    }
   }
 
   shared() {
