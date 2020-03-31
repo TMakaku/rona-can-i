@@ -158,12 +158,14 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   private determineText(first: boolean) {
-    const randomIndex = isNaN(this.firstUrlIndex) || !this.firstUrlIndex ? this.getRandomIndex() : this.firstUrlIndex;
+    const randomIndex = isNaN(this.firstUrlIndex)|| !this.firstUrlIndex || !first ? this.getRandomIndex() : this.firstUrlIndex;
     this.prevIndex = randomIndex
     window.history.pushState('', "Rona can I?", `/${randomIndex}`);
     if (first){
       // this.setColorScheme(randomIndex);
       this.firstUrlIndex = randomIndex;
+    }else {
+      this.setColorScheme(randomIndex);
     }
     this.canIText = this.createTitleObject(this.titles[randomIndex]);
   }
