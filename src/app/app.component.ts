@@ -15,7 +15,6 @@ export interface TitleObject {
   theme?: number
 }
 
-const ronaBaseHref = '/rona-can-i/'
 
 @Component({
   selector: 'app-root',
@@ -135,7 +134,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   @ViewChild('maintextDiv') maintext: ElementRef;
 
   ngOnInit() {
-    this.firstUrlIndex = Number(window.location.pathname.substring(ronaBaseHref.length));
+    this.firstUrlIndex = Number(window.location.pathname.substring(1));
     this.determineText(this.firstUrlIndex);
     this.lottieSize = this.isMobileDevice() ? 150 : 250;
   }
@@ -160,9 +159,10 @@ export class AppComponent implements OnInit, AfterViewInit {
   private determineText(urlIndex?) {
     const randomIndex = isNaN(urlIndex) || !urlIndex ? this.getRandomIndex() : urlIndex;
     this.prevIndex = randomIndex
-    window.history.pushState('', "Rona can I?", `/rona-can-i/${randomIndex}`);
-    if (!urlIndex)
+    window.history.pushState('', "Rona can I?", `/${randomIndex}`);
+    if (!urlIndex){
       this.setColorScheme(randomIndex);
+    }
     this.canIText = this.createTitleObject(this.titles[randomIndex]);
   }
 
