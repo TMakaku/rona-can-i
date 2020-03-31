@@ -5,7 +5,7 @@ import { AnimationItem } from 'lottie-web';
 import { AfterViewInit } from '@angular/core';
 import { ElementRef } from '@angular/core';
 import { fromEvent } from 'rxjs';
-import { debounceTime } from 'rxjs/operators';
+import { debounceTime, first } from 'rxjs/operators';
 
 const EVENT_RESIZE = 'resize';
 export interface TitleObject {
@@ -134,8 +134,9 @@ export class AppComponent implements OnInit, AfterViewInit {
   @ViewChild('maintextDiv') maintext: ElementRef;
 
   ngOnInit() {
-    this.firstUrlIndex = Number(window.location.pathname.substring(1));
-    this.determineText(this.firstUrlIndex);
+    const pathname = window.location.pathname;
+    this.firstUrlIndex = pathname.length > 1 ? Number(pathname.substring(1)) : null;
+    this.determineText(true);
     this.lottieSize = this.isMobileDevice() ? 150 : 250;
   }
 
@@ -153,15 +154,16 @@ export class AppComponent implements OnInit, AfterViewInit {
     this.canIText = { question: '' };
     this.myAnimation.stop();
     this.myAnimation.play();
-    window.setTimeout(() => this.determineText(), 350);
+    window.setTimeout(() => this.determineText(false), 350);
   }
 
-  private determineText(urlIndex?) {
-    const randomIndex = isNaN(urlIndex) || !urlIndex ? this.getRandomIndex() : urlIndex;
+  private determineText(first: boolean) {
+    const randomIndex = isNaN(this.firstUrlIndex) || !this.firstUrlIndex ? this.getRandomIndex() : this.firstUrlIndex;
     this.prevIndex = randomIndex
     window.history.pushState('', "Rona can I?", `/${randomIndex}`);
-    if (!urlIndex){
-      this.setColorScheme(randomIndex);
+    if (first){
+      // this.setColorScheme(randomIndex);
+      this.firstUrlIndex = randomIndex;
     }
     this.canIText = this.createTitleObject(this.titles[randomIndex]);
   }
