@@ -90,7 +90,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     { textcolor: "#20263D", bgcolor: "#CFD3D6" },
     { textcolor: "#EAC629", bgcolor: "#3834F2" },
     { textcolor: "#83A6F6", bgcolor: "#20263D" },
-// -----------------------------------------------
+    // -----------------------------------------------
     { textcolor: "#F1CB92", bgcolor: "#818061" },
     { textcolor: "#323E48", bgcolor: "#FD715D" },
     { textcolor: "#685E5F", bgcolor: "#EAC629" },
@@ -132,6 +132,7 @@ export class AppComponent implements OnInit, AfterViewInit {
       })
   }
   @ViewChild('maintextDiv') maintext: ElementRef;
+  @ViewChild('share') sharebutton: ElementRef;
 
   ngOnInit() {
     const pathname = window.location.pathname;
@@ -142,8 +143,19 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     this.setColorScheme(this.firstUrlIndex);
+    if(this.isMobileDevice() ) {
+      this.sharebutton.nativeElement.setAttribute("width", "86");
+      this.sharebutton.nativeElement.setAttribute("height", "20");
+    }
   }
 
+  copied(event) {
+    alert("Link has been copied!");
+  }
+
+  getUrl() {
+    return window.location.href;
+  }
 
   onAnimationCreated(animation: AnimationItem) {
     this.myAnimation = animation;
@@ -158,13 +170,13 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   private determineText(first: boolean) {
-    const randomIndex = isNaN(this.firstUrlIndex)|| !this.firstUrlIndex || !first ? this.getRandomIndex() : this.firstUrlIndex;
+    const randomIndex = isNaN(this.firstUrlIndex) || !this.firstUrlIndex || !first ? this.getRandomIndex() : this.firstUrlIndex;
     this.prevIndex = randomIndex
     window.history.pushState('', "Rona can I?", `/${randomIndex}`);
-    if (first){
+    if (first) {
       // this.setColorScheme(randomIndex);
       this.firstUrlIndex = randomIndex;
-    }else {
+    } else {
       this.setColorScheme(randomIndex);
     }
     this.canIText = this.createTitleObject(this.titles[randomIndex]);
