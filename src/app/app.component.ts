@@ -227,6 +227,8 @@ export class AppComponent implements OnInit, AfterViewInit {
   };
 
   whatsappShareText() {
-    return "Rona,%20can%20I%20leave%20the%20house?%20" + this.getUrl();
+    return this.getUrl();
+    // "Rona,%20can%20I%20leave%20the%20house?%20" + 
+  
   }
 }
