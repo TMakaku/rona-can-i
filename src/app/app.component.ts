@@ -68,6 +68,8 @@ export class AppComponent implements OnInit, AfterViewInit {
     { question: "I'm horny and <br>my partner's <br>parents aren't <br>home, <br><i>can I leave <br>the house?</i>", answer: "NO!", answerExtra: "your partners parents <br>should be home" },
     { question: "It's my birthday, <br><i>can I leave <br>the house?</i>", answer: "NO!", answerExtra: "happy birthday" },
     { question: "Yo quiero tacos, <br><i>can I leave <br>the house?</i>", answer: "¡NO!" },
+    { question: "I never run, <br>but now I want to<br><i>can I leave <br>the house?</i>" },
+    { question: "I want a gun,<br>some chrystal meth,<br>and to party with <br>big cats in a zoo<br><i>can I leave <br>the house?</i>" }
   ];
 
   private colorSchemes = [
@@ -112,6 +114,9 @@ export class AppComponent implements OnInit, AfterViewInit {
     { textcolor: "#CFD3D6", bgcolor: "#20263D" },
     { textcolor: "#3834F2", bgcolor: "#EAC629" },
     { textcolor: "#20263D", bgcolor: "#83A6F6" },
+
+    { textcolor: "#818061", bgcolor: "#F1CB92" },
+    { textcolor: "#FD715D", bgcolor: "#323E48" },
   ]
 
   canIText: TitleObject;
