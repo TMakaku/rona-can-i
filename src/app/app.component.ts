@@ -237,7 +237,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     if (myNavigator.share) {
       await myNavigator.share({
         title: "Rona, can i?",
-        text: "",
+        text: "Rona, can i?",
         url: this.getUrl()
       });
     }
