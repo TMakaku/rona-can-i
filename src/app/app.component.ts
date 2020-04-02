@@ -27,8 +27,8 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   private titles: TitleObject[] = [
     // { question: "Im hungry, <br><i>can I leave <br>the house?<i>" },
-    { question: "My roommate farted, <br><i>can I leave <br>the house?</i>" },
-    { question: "I see a doggo outside, <br><i>can I leave <br>the house?</i>" },
+    { question: "I see a doggo <br>outside, <br><i>can I leave <br>the house?</i>" },
+    { question: "My roommate <br>farted, <br><i>can I leave <br>the house?</i>" },
     { question: "In need of ramen, <br><i>can I leave <br>the house?</i>" },
     { question: "I feel like I won't <br>catch the virus, <br><i>can I leave <br>the house?</i>" },
     { question: "I'm craving <br>ice cream, <br><i>can I leave <br>the house?</i>" },
