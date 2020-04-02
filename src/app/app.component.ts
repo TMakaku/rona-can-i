@@ -65,7 +65,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     { question: "I've never spent <br>this much time <br>with the Mrs, <br><i>can I leave <br>the house?</i>" },
     { question: "My prins <br>charming is <br>outside, <br><i>can I leave <br>the house?</i>", answer: "NO!", answerExtra: "he should be inside" },
     { question: "I'm out of wine, <br><i>can I leave <br>the house?</i>", answer: "NO!", answerExtra: "...just hurry back" },
-    { question: "I'm horny and <br>my partners <br>parents aren't <br>home, <br><i>can I leave <br>the house?</i>", answer: "NO!", answerExtra: "your partners parents <br>should be home" },
+    { question: "I'm horny and <br>my partner's <br>parents aren't <br>home, <br><i>can I leave <br>the house?</i>", answer: "NO!", answerExtra: "your partners parents <br>should be home" },
     { question: "It's my birthday, <br><i>can I leave <br>the house?</i>", answer: "NO!", answerExtra: "happy birthday" },
     { question: "Yo quiero tacos, <br><i>can I leave <br>the house?</i>", answer: "¡NO!" },
   ];
