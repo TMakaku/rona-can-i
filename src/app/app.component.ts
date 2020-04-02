@@ -150,27 +150,31 @@ export class AppComponent implements OnInit, AfterViewInit {
     }
   }
 
-  shared() {
-    if (this.isMobileDevice() || this.isSafari()) {
-      console.log("safari or mobile")
-      copy();
-    } else {
-      let listener = (e: ClipboardEvent) => {
-        let clipboard = e.clipboardData || window["clipboardData"];
-        clipboard.setData("text", this.getUrl());
-        e.preventDefault();
-      };
-      document.addEventListener("copy", listener, false)
-      document.execCommand("copy");
-      document.removeEventListener("copy", listener, false);
+  // shared() {
+  //   // if (this.isMobileDevice() || this.isSafari()) {
+  //   //   console.log("safari or mobile")
+  //   //   copy();
+  //   // } else {
+  //     let listener = (e: ClipboardEvent) => {
+  //       let clipboard = e.clipboardData || window["clipboardData"];
+  //       clipboard.setData("text", this.getUrl());
+  //       e.preventDefault();
+  //     };
+  //     document.addEventListener("copy", listener, false)
+  //     document.execCommand("copy");
+  //     document.removeEventListener("copy", listener, false);
 
-      window.alert("Link has been copied!");
-    }
-  }
+  //     window.alert("Link has been copied!");
+  //   }
+  // }
 
-  private isSafari() {
-    return navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1;
-  }
+  // private isAndroid() {
+  //   return navigator.userAgent.indexOf("android") > -1
+  // }
+
+  // private isSafari() {
+  //   return navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1;
+  // }
 
   getUrl() {
     return window.location.href;
