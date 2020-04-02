@@ -6,6 +6,7 @@ import { AfterViewInit } from '@angular/core';
 import { ElementRef } from '@angular/core';
 import { fromEvent } from 'rxjs';
 import { debounceTime, first } from 'rxjs/operators';
+import { copy } from './copy.util';
 
 const EVENT_RESIZE = 'resize';
 export interface TitleObject {
@@ -143,23 +144,32 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     this.setColorScheme(this.firstUrlIndex);
-    if(this.isMobileDevice() ) {
+    if (this.isMobileDevice()) {
       this.sharebutton.nativeElement.setAttribute("width", "86");
       this.sharebutton.nativeElement.setAttribute("height", "20");
     }
   }
 
   shared() {
-    let listener = (e: ClipboardEvent) => {
-      let clipboard = e.clipboardData || window["clipboardData"];
-      clipboard.setData("text", this.getUrl());
-      e.preventDefault();
-    };
-    document.addEventListener("copy", listener, false)
-    document.execCommand("copy");
-    document.removeEventListener("copy", listener, false);
+    if (this.isMobileDevice() || this.isSafari()) {
+      console.log("safari or mobile")
+      copy();
+    } else {
+      let listener = (e: ClipboardEvent) => {
+        let clipboard = e.clipboardData || window["clipboardData"];
+        clipboard.setData("text", this.getUrl());
+        e.preventDefault();
+      };
+      document.addEventListener("copy", listener, false)
+      document.execCommand("copy");
+      document.removeEventListener("copy", listener, false);
 
-    window.alert("Link has been copied!");
+      window.alert("Link has been copied!");
+    }
+  }
+
+  private isSafari() {
+    return navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1;
   }
 
   getUrl() {
