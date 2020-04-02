@@ -135,7 +135,6 @@
     }
 
     /* .footer {
-      
     } */
   }
 
@@ -143,11 +142,11 @@
   } */
 </style>
 
-
 <div class="wrapper">
   <div class="topright">
     <!-- (click)="shared()" -->
-    <svg *ngif=false #share class="share"  width="155" height="36" viewBox="0 0 155 36" fill="none"
+    <svg *ngif="isMobileDevice()" #share class="share" width="155" height="36" viewBox="0 0 155 36" fill="none"
+    alt="Whatsapp" href="whatsapp://send" data-href="http://example.com/url-to-share" data-text="getUrl()" 
       xmlns="http://www.w3.org/2000/svg">
       <g clip-path="url(#clip0)">
         <path
