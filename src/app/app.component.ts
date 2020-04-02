@@ -225,4 +225,8 @@ export class AppComponent implements OnInit, AfterViewInit {
     // todo replace with this.windowSize..
     return (typeof window.orientation !== 'undefined') || (navigator.userAgent.indexOf('IEMobile') !== -1);
   };
+
+  whatsappShareText() {
+    return "Rona,%20can%20I%20leave%20the%20house?%20" + this.getUrl();
+  }
 }
