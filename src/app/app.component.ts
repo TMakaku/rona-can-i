@@ -69,7 +69,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     { question: "It's my birthday, <br><i>can I leave <br>the house?</i>", answer: "NO!", answerExtra: "happy birthday" },
     { question: "Yo quiero tacos, <br><i>can I leave <br>the house?</i>", answer: "¡NO!" },
     { question: "I never run, <br>but now I want to<br><i>can I leave <br>the house?</i>" },
-    { question: "I want a gun,<br>some chrystal meth,<br>and to party with <br>big cats in a zoo<br><i>can I leave <br>the house?</i>" }
+    { question: "I want a gun,<br>some chrystal meth,<br>and to party with <br>big cats in a zoo,<br><i>can I leave <br>the house?</i>" }
   ];
 
   private colorSchemes = [
