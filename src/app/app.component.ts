@@ -236,8 +236,8 @@ export class AppComponent implements OnInit, AfterViewInit {
     const myNavigator: any = window.navigator;
     if (myNavigator.share) {
       await myNavigator.share({
-        title: "Rona, can i?",
-        text: "Rona, can i?",
+        title: "Rona, can I?",
+        text: "Rona, can I?",
         url: this.getUrl()
       });
     }
