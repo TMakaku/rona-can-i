@@ -152,7 +152,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   shared() {
     let listener = (e: ClipboardEvent) => {
       let clipboard = e.clipboardData || window["clipboardData"];
-      clipboard.setData("text", this.getUrl);
+      clipboard.setData("text", this.getUrl());
       e.preventDefault();
     };
     document.addEventListener("copy", listener, false)
