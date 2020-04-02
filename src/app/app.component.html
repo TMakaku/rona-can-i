@@ -176,8 +176,8 @@
     <div ngClass="notextExtra" [innerHtml]="canIText.answerExtra"></div>
   </div>
   <div class="footer">
-    <div style="position: absolute; right: 0px; bottom: 0px;">
-      <s1-lottie id="refreshbut"[options]="lottieParams" [height]="lottieSize" [width]="lottieSize" [optimize]="false"
+    <div id="refreshbutDiv" style="position: absolute; right: 0px; bottom: 0px;">
+      <s1-lottie id="refreshbut" [options]="lottieParams" [height]="lottieSize" [width]="lottieSize" [optimize]="false"
         (animationCreated)=onAnimationCreated($event) (click)=refreshed()>
       </s1-lottie>
     </div>
