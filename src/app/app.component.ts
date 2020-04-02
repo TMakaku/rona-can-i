@@ -129,7 +129,7 @@ export class AppComponent implements OnInit, AfterViewInit {
       .pipe(debounceTime(100))
       .subscribe(() => {
         const { innerHeight, innerWidth } = document.defaultView;
-        console.log(innerHeight, innerWidth);
+        // console.log(innerHeight, innerWidth);
       })
   }
   @ViewChild('maintextDiv') maintext: ElementRef;
