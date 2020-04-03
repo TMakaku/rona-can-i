@@ -217,20 +217,20 @@ export class AppComponent implements OnInit, AfterViewInit {
     }
   }
 
-  // private popuplinkedin() {
+  // popuplinkedin() {
   //   const url = 'https://www.linkedin.com/shareArticle?mini=true&url=' + this.getUrl();
   //   // const url = 'https://www.linkedin.com/shareArticle?mini=true&url=' + this.getUrl();
   //   const options = 'toolbar=0,status=0,resizable=1,width=626,height=436';
   //   window.open(url, 'sharer', options);
   // }
 
-  private popuptweet() {
+  popuptweet() {
     const url = 'https://twitter.com/intent/tweet?text=' + this.getUrl();
     const options = 'toolbar=0,status=0,resizable=1,width=626,height=436';
     window.open(url, 'sharer', options);
   }
 
-  private popupFbShare() {
+  popupFbShare() {
     const url = 'https://www.facebook.com/sharer/sharer.php?u=' + this.getUrl();
     const options = 'toolbar=0,status=0,resizable=1,width=626,height=436';
     window.open(url, 'sharer', options);
