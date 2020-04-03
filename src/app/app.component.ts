@@ -6,7 +6,6 @@ import { AfterViewInit } from '@angular/core';
 import { ElementRef } from '@angular/core';
 import { fromEvent } from 'rxjs';
 import { debounceTime, first } from 'rxjs/operators';
-import { copy } from './copy.util';
 
 const EVENT_RESIZE = 'resize';
 export interface TitleObject {
@@ -134,7 +133,6 @@ export class AppComponent implements OnInit, AfterViewInit {
       .pipe(debounceTime(100))
       .subscribe(() => {
         const { innerHeight, innerWidth } = document.defaultView;
-        // console.log(innerHeight, innerWidth);
       })
   }
   @ViewChild('maintextDiv') maintext: ElementRef;
@@ -155,34 +153,8 @@ export class AppComponent implements OnInit, AfterViewInit {
     }
   }
 
-  // shared() {
-  //   // if (this.isMobileDevice() || this.isSafari()) {
-  //   //   console.log("safari or mobile")
-  //   //   copy();
-  //   // } else {
-  //     let listener = (e: ClipboardEvent) => {
-  //       let clipboard = e.clipboardData || window["clipboardData"];
-  //       clipboard.setData("text", this.getUrl());
-  //       e.preventDefault();
-  //     };
-  //     document.addEventListener("copy", listener, false)
-  //     document.execCommand("copy");
-  //     document.removeEventListener("copy", listener, false);
-
-  //     window.alert("Link has been copied!");
-  //   }
-  // }
-
-  // private isAndroid() {
-  //   return navigator.userAgent.indexOf("android") > -1
-  // }
-
-  // private isSafari() {
-  //   return navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1;
-  // }
-
   getUrl() {
-    return window.location.href;
+    return `www.ronacanileavethehouse.com/${this.prevIndex}`;
   }
 
   onAnimationCreated(animation: AnimationItem) {
@@ -202,7 +174,6 @@ export class AppComponent implements OnInit, AfterViewInit {
     this.prevIndex = randomIndex
     window.history.pushState('', "Rona can I?", `/${randomIndex}`);
     if (first) {
-      // this.setColorScheme(randomIndex);
       this.firstUrlIndex = randomIndex;
     } else {
       this.setColorScheme(randomIndex);
@@ -233,8 +204,6 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   whatsappShareText() {
     return this.getUrl();
-    // "Rona,%20can%20I%20leave%20the%20house?%20" + 
-
   }
 
   async shared() {
@@ -248,4 +217,22 @@ export class AppComponent implements OnInit, AfterViewInit {
     }
   }
 
+  // private popuplinkedin() {
+  //   const url = 'https://www.linkedin.com/shareArticle?mini=true&url=' + this.getUrl();
+  //   // const url = 'https://www.linkedin.com/shareArticle?mini=true&url=' + this.getUrl();
+  //   const options = 'toolbar=0,status=0,resizable=1,width=626,height=436';
+  //   window.open(url, 'sharer', options);
+  // }
+
+  private popuptweet() {
+    const url = 'https://twitter.com/intent/tweet?text=' + this.getUrl();
+    const options = 'toolbar=0,status=0,resizable=1,width=626,height=436';
+    window.open(url, 'sharer', options);
+  }
+
+  private popupFbShare() {
+    const url = 'https://www.facebook.com/sharer/sharer.php?u=' + this.getUrl();
+    const options = 'toolbar=0,status=0,resizable=1,width=626,height=436';
+    window.open(url, 'sharer', options);
+  }
 }
